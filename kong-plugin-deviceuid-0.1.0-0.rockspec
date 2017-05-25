@@ -1,5 +1,5 @@
 package = "kong-plugin-deviceuid"
-version = "0.1-0"
+version = "0.1.0-0"
 local pluginName = "deviceuid"
 source = {
   url = "git://github.com/ernestofreyreg/kong-plugin-deviceuid",
