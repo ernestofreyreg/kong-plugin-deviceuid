@@ -1,17 +1,17 @@
 package = "kong-plugin-deviceuid"
-version = "0.1.1-0"
+version = "0.1.2-0"
 local pluginName = "deviceuid"
 source = {
   url = "git://github.com/ernestofreyreg/kong-plugin-deviceuid",
-  tag = "0.1.1"
+  tag = "0.1.2"
 }
 description = {
   summary = "A Kong plugin that will add a sticky deviceuid cookie to all request",
   license = "MIT"
 }
 dependencies = {
-  "lua ~> 5.1",
-  "lua-resty-cookie ~> 0.1.0"
+  "lua >= 5.1",
+  "lua-resty-cookie >= 0.1.0"
 }
 build = {
   type = "builtin",
