@@ -124,13 +124,13 @@ end
 function DeviceUid:rewrite(config)
   DeviceUid.super.rewrite(self)
 
-  ngx.var.shouldCreateDeviceUid = shouldCreateDeviceUidCookie("deviceuid")
+  ngx.var.shouldCreateDeviceUid = shouldCreateDeviceUidCookie(config.cookie_name)
 end
 
 function DeviceUid:header_filter(config)
   DeviceUid.super.header_filter(self)
 
-  setCookies("deviceuid")
+  setCookies(config.cookie_name)
 end
 
 DeviceUid.PRIORITY = 1001
