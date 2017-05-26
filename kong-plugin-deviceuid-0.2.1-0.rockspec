@@ -1,9 +1,9 @@
 package = "kong-plugin-deviceuid"
-version = "0.2.0-0"
+version = "0.2.1-0"
 local pluginName = "deviceuid"
 source = {
   url = "git://github.com/ernestofreyreg/kong-plugin-deviceuid",
-  tag = "0.2.0"
+  tag = "0.2.1"
 }
 description = {
   summary = "A Kong plugin that will add a sticky deviceuid cookie to all request",

@@ -72,7 +72,7 @@ local function shouldCreateDeviceUidCookie (cookieName)
   if not deviceUidCookie or deviceUidCookie == "" then
     return false
   end
-  allCookies["deviceuid"] = deviceUidCookie
+  allCookies[cookieName] = deviceUidCookie
 
   -- Rewrite the request Cookie header
   ngx.req.set_header("Cookie", cookieTableHeader(allCookies))
@@ -121,7 +121,7 @@ function DeviceUid:new()
     DeviceUid.super.new(self, "deviceuid")
 end
 
-function DeviceUid:rewrite(config)
+function DeviceUid:access(config)
   DeviceUid.super.rewrite(self)
 
   ngx.var.shouldCreateDeviceUid = shouldCreateDeviceUidCookie(config.cookie_name)
