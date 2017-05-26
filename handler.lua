@@ -81,7 +81,7 @@ local function shouldCreateDeviceUidCookie (cookieName)
 end
 
 local function setCookies (cookieName)
-  if not ngx.var.shouldCreateDeviceUid then
+  if not ngx.ctx.shouldCreateDeviceUid then
     return
   end
 
@@ -124,7 +124,7 @@ end
 function DeviceUid:access(config)
   DeviceUid.super.access(self)
 
-  ngx.var.shouldCreateDeviceUid = shouldCreateDeviceUidCookie(config.cookie_name)
+  ngx.ctx.shouldCreateDeviceUid = shouldCreateDeviceUidCookie(config.cookie_name)
 end
 
 function DeviceUid:header_filter(config)
