@@ -3,8 +3,8 @@ A Kong plugin that will add a sticky deviceuid cookie to all requests
 
 ## How it works
 
-When enabled, this plugin will add a new "deviceuid" cookie to all request and it will persist the value across request
-making this user traceable across requests.
+When enabled, this plugin will add a "deviceuid" cookie to all requests and it will persist the value making this user
+traceable.
 
 ## Install
 
@@ -26,4 +26,4 @@ curl -X POST http://localhost:8001/apis/{api_id}/plugins \
 form parameter|required|description
 ---|---|---
 `name`|*required*|The name of the plugin to use, in this case: `deviceuid`
-`cookie_name`|*optional*|The name of the cookie you want to use
+`cookie_name`|*optional*|The name of the cookie you want to use, by default `deviceuid`
