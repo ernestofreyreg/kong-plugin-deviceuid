@@ -122,7 +122,7 @@ function DeviceUid:new()
 end
 
 function DeviceUid:access(config)
-  DeviceUid.super.rewrite(self)
+  DeviceUid.super.access(self)
 
   ngx.var.shouldCreateDeviceUid = shouldCreateDeviceUidCookie(config.cookie_name)
 end
